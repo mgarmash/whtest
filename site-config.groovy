@@ -4,7 +4,7 @@ site {
 	name = "Max Garmash"
 	googleAnalyticsEnabled = true
 	GATracker = "UA-20341639-4"
-	postPerPage = 10
+	postPerPage = 5
 	regenerate = true
 }
 

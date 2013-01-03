@@ -170,3 +170,16 @@ ul {
 ol {
     margin-left: 20px;
 }
+
+.pager {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.page {
+    margin: 0 5px;
+}
+
+.current {
+    margin: 0 5px;
+}

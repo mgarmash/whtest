@@ -1,5 +1,5 @@
 Поддержка Feedburner и Socialize
-16-01-2012 01:05
+
 rizzo, feedburner, rfc3339
 
 Пришлось немного повозиться с форматом ATOM для rss-фида. Оказалось, что java нативно не умеет делать timestamp'ы в формате [RFC3339](http://www.ietf.org/rfc/rfc3339.txt),

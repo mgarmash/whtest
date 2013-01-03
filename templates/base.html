@@ -28,9 +28,9 @@
             <a href="/"><div id=logo></div></a>
             <div id="clear"></div>
             $content
-            <% if (pages > 1) print """
+            <% if (pager) print """
             <div class="pager">
-                ${config.templateEngine.createTemplate(config.pagerTmpl).make()}
+                ${config.templateEngine.createTemplate(config.pagerTmpl).make(pager)}
             </div>
             """%>
             <% if (title) print """

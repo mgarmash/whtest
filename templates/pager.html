@@ -1,5 +1,13 @@
-<% if (title) print """
-        <div class="addthis_toolbox addthis_default_style" style="float: right; margin-top: -30px;">
-            ${config.templateEngine.createTemplate(config.addThisTmpl).make()}
-        </div>
-"""%>
+<% if (prev == 1) {print "<a href='/'>Раньше</a>"} else if (prev) {print "<a href='/$prev'>Раньше</a>"} else {print "Раньше"} %>
+<% for (int i=1; i <= max; i++) {
+    if (i == current) {
+        print "<span class='current'>${i}</span>"
+    } else {
+        if (i==1) {
+            print "<a class='page' href='/'>1</a>"
+        } else {
+            print "<a class='page' href='/$i'>$i</a>"
+        }
+    }
+}%>
+<% if (next) {print "<a href='/$next'>Позже</a>"} else {print "Позже"} %>
