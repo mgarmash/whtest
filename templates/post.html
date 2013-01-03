@@ -1,0 +1,6 @@
+${config.outWithMonthFormatter.format(post.lastUpdated)}
+<h2 class="title">${post.title}</h2>
+<p>
+    Теги: ${post.tags.sort {it.name}.collect {'<a href="' + config.createTagLink(it) + '">' + it.title + '</a>'}.join(', ')}
+</p>
+${post.content}

@@ -1,0 +1,11 @@
+<entry>
+    <title>${post.title}</title>
+    <id>tag:${config.site.url},${config.rfc3339Format(post.lastUpdated)}:/${post.name}/</id>
+    <published>${config.rfc3339Format(post.lastUpdated)}</published>
+    <updated>${config.rfc3339Format(post.lastUpdated)}</updated>
+    <link href="${config.site.url}${config.createPostLink(post)}"/>
+    <summary>${post.summary}</summary>
+    <content type="html">
+	    ${post.content}
+    </content>
+</entry>

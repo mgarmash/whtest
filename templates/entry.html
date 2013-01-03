@@ -1,0 +1,18 @@
+<div class="entry">
+    <h2 class="title">
+        <span class="date">${config.outFormatter.format(post.lastUpdated)}</span>&nbsp;<a href="${config.createPostLink(post)}">${post.title}</a>
+    </h2>
+    <p>Теги: ${post.tags.sort {it.name}.collect {'<a href="' + config.createTagLink(it) + '">' + it.title + '</a>'}.join(', ')}</p>
+    <% if (post.summary) print post.summary + """
+    <a href="${config.createPostLink(post)}">Далее</a>"""
+    else print post.content
+    %>
+    <p>
+        <a href="${config.createPostLink(post)}#disqus_thread">Комментарии</a>
+        <span class="addthis_toolbox addthis_default_style" addthis:url="${config.site.url + config.createPostLink(post)}"
+              style="float: right; margin-top:5px;">
+            ${config.templateEngine.createTemplate(config.addThisTmpl).make()}
+        </span>
+    </p>
+</div>
+<hr class="ending"/>

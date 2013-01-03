@@ -1,0 +1,5 @@
+<% if (title) print """
+        <div class="addthis_toolbox addthis_default_style" style="float: right; margin-top: -30px;">
+            ${config.templateEngine.createTemplate(config.addThisTmpl).make()}
+        </div>
+"""%>
